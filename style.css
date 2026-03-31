@@ -54,7 +54,7 @@ body::before {
     padding: 0 20px 60px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 
 /* ─── CARD BASE ─── */
@@ -140,7 +140,7 @@ body::before {
 #header-overlay {
     position: absolute;
     right: 0;
-    bottom: -45px;
+    bottom: -64px;
     width: 50%;
     max-width: none;
     height: auto;
@@ -441,7 +441,7 @@ body::before {
   .page              { margin: 18vh auto 0; padding: 0 16px 40px; }
   .hero              { padding: 28px; min-height: unset; }
   /* .hero-char         { width: 100px; align-self: flex-end; } */
-  #header-overlay    { width: clamp(180px, 40%, 400px); max-width: 180px; bottom: -20px;}
+  #header-overlay    { width: clamp(180px, 40%, 400px); max-width: 180px; bottom: -28px;}
   .hero-text         { padding-bottom: 0; }
   .toolkit-grid      { grid-template-columns: 1fr; }
   .project-item      { grid-template-columns: 1fr; }
@@ -450,5 +450,5 @@ body::before {
 }
 /* For the header-overlay */
 @media (max-width: 420px) {
-  #header-overlay     { width: clamp(180px, 40%, 400px); max-width: 85px; bottom: -20px;}
+  #header-overlay     { width: clamp(180px, 40%, 400px); max-width: 85px; bottom: -15px;}
 }
