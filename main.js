@@ -56,16 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const gifSrc = img.dataset.gif;
   let hoverTimer = null;
 
-  item.addEventListener('mouseenter', () => {
+  const startGif = () => {
     hoverTimer = setTimeout(() => {
       if (gifSrc) img.src = gifSrc;
-    }, 750); // hover delay
-  });
+    }, 1000);
+  };
 
-  item.addEventListener('mouseleave', () => {
-    clearTimeout(hoverTimer); // cancels if you leave before 1s
+  const stopGif = () => {
+    clearTimeout(hoverTimer);
     img.src = staticSrc;
-  });
+  };
+
+  item.addEventListener('mouseenter', startGif);
+  item.addEventListener('mouseleave', stopGif);
+  item.addEventListener('touchstart', startGif, { passive: true });
+  item.addEventListener('touchend', stopGif, { passive: true });
 });
 
   /* ── Project cards: subtle parallax on mouse move ── */
